@@ -48,7 +48,7 @@ public class BoundaryAcheterProduit {
 					}
 					else {
 						System.out.println(nomAcheteur+" veut acheter "+quantiteVoulue+" "+produit+", malheureusement "+ nomVendeur + " n'en a plus que "+quantiteAchetee+". "+nomAcheteur
-								+"achète tout le stock de "+nomVendeur+".");
+								+" achète tout le stock de "+nomVendeur+".");
 					}
 				}
 			}
