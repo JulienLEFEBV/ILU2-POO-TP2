@@ -37,6 +37,9 @@ class ControlTrouverEtalVendeurTest {
 		village.installerVendeur(bonemine, "Fleur", 75);
 		assertNull(controlTrouverEtalVendeur.trouverEtalVendeur("Obelix"));
 		assertEquals(controlTrouverEtalVendeur.trouverEtalVendeur("Bonemine").getVendeur(),bonemine);
+		village.partirVendeur(bonemine);
+		assertNull(controlTrouverEtalVendeur.trouverEtalVendeur("Bonemine"));
+		assertNull(controlTrouverEtalVendeur.trouverEtalVendeur("Obelix"));
 	}
 
 }

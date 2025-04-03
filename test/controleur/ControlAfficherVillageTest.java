@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import personnages.Chef;
+import personnages.Druide;
+import personnages.Gaulois;
 import villagegaulois.Village;
 
 class ControlAfficherVillageTest {
@@ -29,17 +31,26 @@ class ControlAfficherVillageTest {
 
 	@Test
 	void testDonnerNomsVillageois() {
-		fail("Not yet implemented");
+		assertEquals(controlAfficherVillage.donnerNomsVillageois()[0],"Abraracourcix");
+		Gaulois bonemine = new Gaulois("Bonemine",3);
+		village.ajouterHabitant(bonemine);
+		assertEquals(controlAfficherVillage.donnerNomsVillageois()[0],"Abraracourcix");
+		assertEquals(controlAfficherVillage.donnerNomsVillageois()[1],"Bonemine");
+		Druide panoramix = new Druide("Panoramix",1,5,10);
+		village.ajouterHabitant(panoramix);
+		assertEquals(controlAfficherVillage.donnerNomsVillageois()[0],"Abraracourcix");
+		assertEquals(controlAfficherVillage.donnerNomsVillageois()[1],"Bonemine");
+		assertEquals(controlAfficherVillage.donnerNomsVillageois()[2],"le druide Panoramix");
 	}
 
 	@Test
 	void testDonnerNomVillage() {
-		fail("Not yet implemented");
+		assertEquals(controlAfficherVillage.donnerNomVillage(), "le village des irréductibles");
 	}
 
 	@Test
 	void testDonnerNbEtals() {
-		fail("Not yet implemented");
+		assertEquals(controlAfficherVillage.donnerNbEtals(),5);
 	}
 
 }

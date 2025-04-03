@@ -30,7 +30,7 @@ public class BoundaryAcheterProduit {
 						System.out.println("Veuillez entre un entier entre 1 et "+vendeurs.length);
 					}
 					idVendeur=Clavier.entrerEntier("")-1;
-				}while(idVendeur<vendeurs.length-1);
+				}while(idVendeur>vendeurs.length-1);
 				String nomVendeur=vendeurs[idVendeur];
 				if(!controlAcheterProduit.verifierIdentite(nomVendeur)) {
 					System.out.println("Je suis désolée "+nomVendeur+" mais il faut être un habitant de notre village pour commercer ici.");
